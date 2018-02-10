@@ -6,10 +6,12 @@ def withdraw (balance, request) :
     currentBalance = balance - request
     print ("Current balance =",balance)
     
+    #edge cases tests
     if request > balance :
         print ("Can't give you all this money !!")
-        return
-       
+    elif request <= 0:
+        print 'invalid request'
+    else:
     #iterating over given vals
     for index in validVlaues :
         # iterating over every val until not valid
